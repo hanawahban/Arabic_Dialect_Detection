@@ -1,6 +1,8 @@
 import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn.feature_extraction.text import TfidfVectorizer
+import os
+from src.models import run_all_experiments
 
 df = pd.read_excel("data/CleanedData.xlsx")
 
@@ -106,3 +108,11 @@ X_train_char = char_vec.fit_transform(X_train)
 X_test_char = char_vec.transform(X_test)
 
 print("Char TF-IDF shape:", X_train_char.shape)
+
+os.makedirs("results", exist_ok=True)
+
+run_all_experiments(
+    X_train_word, X_test_word,
+    X_train_char, X_test_char,
+    y_train, y_test
+)

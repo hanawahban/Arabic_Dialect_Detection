@@ -1,0 +1,190 @@
+[
+  {
+    "Model": "Random Forest",
+    "Features": "Word TF-IDF",
+    "Accuracy": 0.7399,
+    "Macro Precision": 0.7442,
+    "Macro Recall": 0.7403,
+    "Macro F1": 0.7397,
+    "Train Time (s)": 11.1746,
+    "Pred Time (s)": 0.6816,
+    "Confusion Matrix": [
+      [
+        623,
+        134,
+        57,
+        41,
+        78
+      ],
+      [
+        86,
+        626,
+        87,
+        40,
+        126
+      ],
+      [
+        47,
+        119,
+        695,
+        43,
+        54
+      ],
+      [
+        28,
+        43,
+        31,
+        734,
+        86
+      ],
+      [
+        26,
+        47,
+        19,
+        38,
+        821
+      ]
+    ]
+  },
+  {
+    "Model": "Random Forest",
+    "Features": "Char TF-IDF",
+    "Accuracy": 0.7314,
+    "Macro Precision": 0.7424,
+    "Macro Recall": 0.7318,
+    "Macro F1": 0.732,
+    "Train Time (s)": 17.1425,
+    "Pred Time (s)": 0.2298,
+    "Confusion Matrix": [
+      [
+        580,
+        187,
+        74,
+        38,
+        54
+      ],
+      [
+        63,
+        703,
+        87,
+        61,
+        51
+      ],
+      [
+        40,
+        117,
+        731,
+        44,
+        26
+      ],
+      [
+        22,
+        42,
+        36,
+        797,
+        25
+      ],
+      [
+        28,
+        130,
+        29,
+        116,
+        648
+      ]
+    ]
+  },
+  {
+    "Model": "KNN",
+    "Features": "Word TF-IDF",
+    "Accuracy": 0.4075,
+    "Macro Precision": 0.4154,
+    "Macro Recall": 0.4094,
+    "Macro F1": 0.3901,
+    "Train Time (s)": 0.0181,
+    "Pred Time (s)": 1.3509,
+    "Confusion Matrix": [
+      [
+        265,
+        200,
+        51,
+        241,
+        176
+      ],
+      [
+        172,
+        357,
+        56,
+        223,
+        157
+      ],
+      [
+        142,
+        185,
+        191,
+        235,
+        205
+      ],
+      [
+        92,
+        62,
+        28,
+        671,
+        69
+      ],
+      [
+        144,
+        136,
+        42,
+        186,
+        443
+      ]
+    ]
+  },
+  {
+    "Model": "KNN",
+    "Features": "Char TF-IDF",
+    "Accuracy": 0.2675,
+    "Macro Precision": 0.4287,
+    "Macro Recall": 0.2713,
+    "Macro F1": 0.2009,
+    "Train Time (s)": 0.019,
+    "Pred Time (s)": 1.5015,
+    "Confusion Matrix": [
+      [
+        89,
+        43,
+        0,
+        586,
+        215
+      ],
+      [
+        19,
+        92,
+        3,
+        656,
+        195
+      ],
+      [
+        19,
+        50,
+        11,
+        683,
+        195
+      ],
+      [
+        11,
+        23,
+        1,
+        784,
+        103
+      ],
+      [
+        24,
+        34,
+        1,
+        603,
+        289
+      ]
+    ]
+  }
+]
