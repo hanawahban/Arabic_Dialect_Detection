@@ -1,17 +1,19 @@
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.linear_model import LogisticRegression
+from sklearn.svm import LinearSVC
 from sklearn.metrics import classification_report, confusion_matrix, accuracy_score
 import time
 import json
 import pandas as pd
 
+
 def run_experiment(model, model_name, feature_name, X_train, X_test, y_train, y_test):
-    # Train
     start = time.time()
     model.fit(X_train, y_train)
     train_time = round(time.time() - start, 4)
 
-    # Predict
     start = time.time()
     y_pred = model.predict(X_test)
     pred_time = round(time.time() - start, 4)
@@ -41,10 +43,18 @@ def run_experiment(model, model_name, feature_name, X_train, X_test, y_train, y_
 
 def run_all_experiments(X_train_word, X_test_word, X_train_char, X_test_char, y_train, y_test):
     experiments = [
-        (RandomForestClassifier(n_estimators=100, random_state=42), "Random Forest", "Word TF-IDF"),
-        (RandomForestClassifier(n_estimators=100, random_state=42), "Random Forest", "Char TF-IDF"),
-        (KNeighborsClassifier(n_neighbors=5),                       "KNN",           "Word TF-IDF"),
-        (KNeighborsClassifier(n_neighbors=5),                       "KNN",           "Char TF-IDF"),
+        # Hamza's models
+        (MultinomialNB(),                                        "Naive Bayes",         "Word TF-IDF"),
+        (MultinomialNB(),                                        "Naive Bayes",         "Char TF-IDF"),
+        (LogisticRegression(max_iter=1000, solver="lbfgs"),      "Logistic Regression", "Word TF-IDF"),
+        (LogisticRegression(max_iter=1000, solver="lbfgs"),      "Logistic Regression", "Char TF-IDF"),
+        (LinearSVC(max_iter=2000),                               "Linear SVM",          "Word TF-IDF"),
+        (LinearSVC(max_iter=2000),                               "Linear SVM",          "Char TF-IDF"),
+        # Hana's models
+        (RandomForestClassifier(n_estimators=100, random_state=42), "Random Forest",    "Word TF-IDF"),
+        (RandomForestClassifier(n_estimators=100, random_state=42), "Random Forest",    "Char TF-IDF"),
+        (KNeighborsClassifier(n_neighbors=5),                       "KNN",              "Word TF-IDF"),
+        (KNeighborsClassifier(n_neighbors=5),                       "KNN",              "Char TF-IDF"),
     ]
 
     results = []
@@ -54,15 +64,12 @@ def run_all_experiments(X_train_word, X_test_word, X_train_char, X_test_char, y_
         print(f"\nRunning {model_name} with {feature_name}...")
         results.append(run_experiment(model, model_name, feature_name, X_train, X_test, y_train, y_test))
 
-    # Save results
-    with open("results/rf_knn_results.json", "w") as f:
+    with open("results/all_results.json", "w") as f:
         json.dump(results, f, indent=2)
-    print("\nRandom Forest & KNN results saved to results/rf_knn_results.json")
+    print("\nAll results saved to results/all_results.json")
 
-    # Print summary table
     summary = pd.DataFrame([{k: v for k, v in r.items() if k != "Confusion Matrix"} for r in results])
     print("\nResults Summary:")
     print(summary.to_string(index=False))
 
     return results
-
