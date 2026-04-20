@@ -1,0 +1,472 @@
+[
+  {
+    "Model": "Naive Bayes",
+    "Features": "Word TF-IDF",
+    "Accuracy": 0.8243,
+    "Macro Precision": 0.8325,
+    "Macro Recall": 0.8242,
+    "Macro F1": 0.8265,
+    "Train Time (s)": 0.0306,
+    "Pred Time (s)": 0.0008,
+    "Confusion Matrix": [
+      [
+        711,
+        118,
+        55,
+        24,
+        25
+      ],
+      [
+        78,
+        773,
+        69,
+        18,
+        27
+      ],
+      [
+        25,
+        71,
+        841,
+        11,
+        10
+      ],
+      [
+        14,
+        81,
+        22,
+        789,
+        16
+      ],
+      [
+        34,
+        89,
+        15,
+        29,
+        784
+      ]
+    ]
+  },
+  {
+    "Model": "Naive Bayes",
+    "Features": "Char TF-IDF",
+    "Accuracy": 0.7598,
+    "Macro Precision": 0.7667,
+    "Macro Recall": 0.7596,
+    "Macro F1": 0.7603,
+    "Train Time (s)": 0.0339,
+    "Pred Time (s)": 0.0023,
+    "Confusion Matrix": [
+      [
+        622,
+        144,
+        86,
+        42,
+        39
+      ],
+      [
+        74,
+        713,
+        95,
+        37,
+        46
+      ],
+      [
+        31,
+        60,
+        811,
+        31,
+        25
+      ],
+      [
+        23,
+        73,
+        60,
+        732,
+        34
+      ],
+      [
+        31,
+        105,
+        36,
+        64,
+        715
+      ]
+    ]
+  },
+  {
+    "Model": "Logistic Regression",
+    "Features": "Word TF-IDF",
+    "Accuracy": 0.8143,
+    "Macro Precision": 0.818,
+    "Macro Recall": 0.8144,
+    "Macro F1": 0.8144,
+    "Train Time (s)": 0.391,
+    "Pred Time (s)": 0.0005,
+    "Confusion Matrix": [
+      [
+        691,
+        115,
+        42,
+        31,
+        54
+      ],
+      [
+        74,
+        712,
+        60,
+        23,
+        96
+      ],
+      [
+        23,
+        74,
+        807,
+        22,
+        32
+      ],
+      [
+        16,
+        24,
+        22,
+        782,
+        78
+      ],
+      [
+        14,
+        38,
+        11,
+        29,
+        859
+      ]
+    ]
+  },
+  {
+    "Model": "Logistic Regression",
+    "Features": "Char TF-IDF",
+    "Accuracy": 0.8031,
+    "Macro Precision": 0.8041,
+    "Macro Recall": 0.8034,
+    "Macro F1": 0.803,
+    "Train Time (s)": 1.5735,
+    "Pred Time (s)": 0.0022,
+    "Confusion Matrix": [
+      [
+        689,
+        115,
+        55,
+        33,
+        41
+      ],
+      [
+        71,
+        733,
+        62,
+        43,
+        56
+      ],
+      [
+        37,
+        61,
+        803,
+        30,
+        27
+      ],
+      [
+        19,
+        32,
+        33,
+        805,
+        33
+      ],
+      [
+        26,
+        51,
+        18,
+        88,
+        768
+      ]
+    ]
+  },
+  {
+    "Model": "Linear SVM",
+    "Features": "Word TF-IDF",
+    "Accuracy": 0.8063,
+    "Macro Precision": 0.8078,
+    "Macro Recall": 0.8066,
+    "Macro F1": 0.8061,
+    "Train Time (s)": 0.214,
+    "Pred Time (s)": 0.0005,
+    "Confusion Matrix": [
+      [
+        695,
+        109,
+        48,
+        32,
+        49
+      ],
+      [
+        83,
+        691,
+        72,
+        29,
+        90
+      ],
+      [
+        33,
+        73,
+        797,
+        23,
+        32
+      ],
+      [
+        15,
+        21,
+        21,
+        791,
+        74
+      ],
+      [
+        25,
+        42,
+        12,
+        33,
+        839
+      ]
+    ]
+  },
+  {
+    "Model": "Linear SVM",
+    "Features": "Char TF-IDF",
+    "Accuracy": 0.8052,
+    "Macro Precision": 0.8054,
+    "Macro Recall": 0.8057,
+    "Macro F1": 0.8049,
+    "Train Time (s)": 0.9714,
+    "Pred Time (s)": 0.0022,
+    "Confusion Matrix": [
+      [
+        702,
+        105,
+        51,
+        32,
+        43
+      ],
+      [
+        89,
+        716,
+        69,
+        46,
+        45
+      ],
+      [
+        36,
+        56,
+        805,
+        31,
+        30
+      ],
+      [
+        23,
+        24,
+        30,
+        827,
+        18
+      ],
+      [
+        35,
+        50,
+        27,
+        81,
+        758
+      ]
+    ]
+  },
+  {
+    "Model": "Random Forest",
+    "Features": "Word TF-IDF",
+    "Accuracy": 0.7399,
+    "Macro Precision": 0.7442,
+    "Macro Recall": 0.7403,
+    "Macro F1": 0.7397,
+    "Train Time (s)": 11.2104,
+    "Pred Time (s)": 0.6776,
+    "Confusion Matrix": [
+      [
+        623,
+        134,
+        57,
+        41,
+        78
+      ],
+      [
+        86,
+        626,
+        87,
+        40,
+        126
+      ],
+      [
+        47,
+        119,
+        695,
+        43,
+        54
+      ],
+      [
+        28,
+        43,
+        31,
+        734,
+        86
+      ],
+      [
+        26,
+        47,
+        19,
+        38,
+        821
+      ]
+    ]
+  },
+  {
+    "Model": "Random Forest",
+    "Features": "Char TF-IDF",
+    "Accuracy": 0.7314,
+    "Macro Precision": 0.7424,
+    "Macro Recall": 0.7318,
+    "Macro F1": 0.732,
+    "Train Time (s)": 16.4925,
+    "Pred Time (s)": 0.2406,
+    "Confusion Matrix": [
+      [
+        580,
+        187,
+        74,
+        38,
+        54
+      ],
+      [
+        63,
+        703,
+        87,
+        61,
+        51
+      ],
+      [
+        40,
+        117,
+        731,
+        44,
+        26
+      ],
+      [
+        22,
+        42,
+        36,
+        797,
+        25
+      ],
+      [
+        28,
+        130,
+        29,
+        116,
+        648
+      ]
+    ]
+  },
+  {
+    "Model": "KNN",
+    "Features": "Word TF-IDF",
+    "Accuracy": 0.4075,
+    "Macro Precision": 0.4154,
+    "Macro Recall": 0.4094,
+    "Macro F1": 0.3901,
+    "Train Time (s)": 0.0181,
+    "Pred Time (s)": 1.2165,
+    "Confusion Matrix": [
+      [
+        265,
+        200,
+        51,
+        241,
+        176
+      ],
+      [
+        172,
+        357,
+        56,
+        223,
+        157
+      ],
+      [
+        142,
+        185,
+        191,
+        235,
+        205
+      ],
+      [
+        92,
+        62,
+        28,
+        671,
+        69
+      ],
+      [
+        144,
+        136,
+        42,
+        186,
+        443
+      ]
+    ]
+  },
+  {
+    "Model": "KNN",
+    "Features": "Char TF-IDF",
+    "Accuracy": 0.2675,
+    "Macro Precision": 0.4287,
+    "Macro Recall": 0.2713,
+    "Macro F1": 0.2009,
+    "Train Time (s)": 0.0186,
+    "Pred Time (s)": 1.4622,
+    "Confusion Matrix": [
+      [
+        89,
+        43,
+        0,
+        586,
+        215
+      ],
+      [
+        19,
+        92,
+        3,
+        656,
+        195
+      ],
+      [
+        19,
+        50,
+        11,
+        683,
+        195
+      ],
+      [
+        11,
+        23,
+        1,
+        784,
+        103
+      ],
+      [
+        24,
+        34,
+        1,
+        603,
+        289
+      ]
+    ]
+  }
+]
